@@ -11,3 +11,8 @@ I propose to create...
 
 We must create an application that has at least 4 services working together.
 Service 1 will be the 'core service' which will be responsible for communicating with the other 3 services. Services 2 and 3 will both create a random object, with service 4 also creating a random object based on the results of services 2 and 3.
+
+
+ERD
+
+![image](https://user-images.githubusercontent.com/101266740/165546302-ded7040e-8be2-4f65-b5e9-e03e6c236dbd.png)
