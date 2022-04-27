@@ -16,3 +16,5 @@ Service 1 will be the 'core service' which will be responsible for communicating
 ERD
 
 ![image](https://user-images.githubusercontent.com/101266740/165546302-ded7040e-8be2-4f65-b5e9-e03e6c236dbd.png)
+
+As the ERD reveals, service 1 will be my front end. Services 2 and 3 will be the random number and random name generator which will look at whether the number generated is even or odd and if the name begins with a letter in the first half of the alphabet to determine the prize which will be generated through service 4.
