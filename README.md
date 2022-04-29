@@ -2,7 +2,9 @@
 
 ### Author: Art Aliu
 
-* [Brief] (#Brief)
+## Contents
+
+* [Brief](#Brief)
 
 ## Brief
 
