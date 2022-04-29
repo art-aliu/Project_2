@@ -6,9 +6,9 @@
 
 * [Brief](#Brief)
 * [Diagram](#Diagram)
-* [Risk Assessment](#Risk Assessment)
-* [CI/CD Pipeline](#CI/CD Pipeline)
-* [App Design](#App Design)
+* [Risk Assessment](#Risk-Assessment)
+* [CI/CD Pipeline](#CI/CD-Pipeline)
+* [App Design](#App-Design)
 
 ## Brief
 
