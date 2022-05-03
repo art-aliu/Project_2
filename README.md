@@ -1,4 +1,4 @@
-# Prize Generator
+# Football Position Generator
 
 ### Author: Art Aliu
 
