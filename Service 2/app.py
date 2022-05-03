@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 
-physical_attribute = ['Speed', 'Strength', 'Endurance']
+physical_attribute = ['Speed', 'Strength', 'Endurance', 'Shooting', 'Passing', 'Tackling']
 
 @app.route('/get/physical_attribute')
 def get_physical_attribute():
