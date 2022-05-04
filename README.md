@@ -62,3 +62,7 @@ In response to the brief, I have chosen to develop a prize generator. This will 
 - Name API (Service 3): This service receives HTTP GET requests from service 1, and responds with a randomly selected football skill/attribute from a list, using random.choice().
 - Generate API (Service 4): This service receives HTTP POST requests from service 1, which provide the randomly generated attributes and skills, service 4 has two dictionaries which use this data to determine the status effect associated with the event.
 
+## Future Improvements
+
+## Acknowledgements
+
