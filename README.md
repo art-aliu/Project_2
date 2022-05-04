@@ -91,3 +91,6 @@ In response to the brief, I have chosen to develop a prize generator. This will 
 
 ## Acknowledgements
 
+-Victoria Sacre
+-Bootstrap
+-W3schools for basic navbar code
