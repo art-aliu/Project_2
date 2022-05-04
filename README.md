@@ -34,6 +34,12 @@ The full tech stack that I will use in this project is:
 
 As the diagram reveals, service 1 will be my front end. Services 2 and 3 will provide a random physical attribute and a random football skill and service 4 will use the result to give a 'position'.
 
+## ED
+
+I started with this basic entity diagram as my initial thoughts as to what I wanted to deliver to the user
+
+![image](https://user-images.githubusercontent.com/101266740/166654334-70edc87d-0a57-46f6-a428-9cab5a0b12bd.png)
+
 ## Risk Assessment
 
 ![image](https://user-images.githubusercontent.com/101266740/166652051-3153ea9c-7667-4ed5-b7fc-bb4c8ce100fc.png)
