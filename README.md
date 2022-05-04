@@ -36,9 +36,9 @@ As the diagram reveals, service 1 will be my front end. Services 2 and 3 will pr
 
 ## Risk Assessment
 
-![image](https://user-images.githubusercontent.com/101266740/165773451-8dba464d-e708-414d-92f8-8f125266b831.png)
+![image](https://user-images.githubusercontent.com/101266740/166652051-3153ea9c-7667-4ed5-b7fc-bb4c8ce100fc.png)
 
-My risk assessment for this project shows the possible risks that may arise during this project.
+My risk assessment for this project shows the possible risks that may arise during this project and the dates which I wrote down each risk.
 
 ## CI/CD pipeline 
 
