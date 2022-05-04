@@ -8,6 +8,7 @@
 * [Diagram](#Diagram)
 * [ED](#ED)
 * [Risk Assessment](#Risk-Assessment)
+* [Updated Risk Assessment](#Updated-Risk-Assessment)
 * [CI/CD Pipeline](#CI/CD-Pipeline)
 * [App Design](#App-Design)
 * [Future Improvements](#Future-Improvements)
