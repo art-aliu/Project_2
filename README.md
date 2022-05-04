@@ -62,8 +62,8 @@ Image taken from: https://collabnix.com/wp-content/uploads/2018/03/ci-cd.png
 In response to the brief, I have chosen to develop a prize generator. This will look as follows:
 
 - Front-end (Service 1): The service with which the user interacts. This service sends requests to the other services to generate random events and then displays the generated events to the user.
-- Number API (Service 2): This service receives HTTP GET requests from service 1 and responds with a randomly physical attribute, using random.choice().
-- Name API (Service 3): This service receives HTTP GET requests from service 1, and responds with a randomly selected football skill/attribute from a list, using random.choice().
+- Number API (Service 2): This service receives HTTP GET requests from service 1 and responds with a random attribute, using random.choice().
+- Name API (Service 3): This service receives HTTP GET requests from service 1, and responds with a randomly selected football skill from a list, using random.choice().
 - Generate API (Service 4): This service receives HTTP POST requests from service 1, which provide the randomly generated attributes and skills, service 4 has two dictionaries which use this data to determine the status effect associated with the event.
 
 ## Future Improvements
