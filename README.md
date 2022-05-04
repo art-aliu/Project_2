@@ -43,6 +43,8 @@ I started with this basic entity diagram as my initial thoughts as to what I wan
 
 ![image](https://user-images.githubusercontent.com/101266740/166654334-70edc87d-0a57-46f6-a428-9cab5a0b12bd.png)
 
+Initially my idea was to have service 2 generating a random attribute for a player and for service 3 to have generate a number number between 1-99 using random.randint to show the "skill" level of a player. However, I decided to change it so that both services 2 and 3 provide a 'random.choice' of a player attribute and player skill respectively. Service 4 will then use the results to determine the best possible position for this player.
+
 ## Risk Assessment
 
 ![image](https://user-images.githubusercontent.com/101266740/166652051-3153ea9c-7667-4ed5-b7fc-bb4c8ce100fc.png)
