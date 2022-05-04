@@ -10,6 +10,8 @@
 * [Risk Assessment](#Risk-Assessment)
 * [CI/CD Pipeline](#CI/CD-Pipeline)
 * [App Design](#App-Design)
+* [Future Improvements](#Future-Improvements)
+* [Acknowledgements](#Acknowledgements)
 
 ## Brief
 
