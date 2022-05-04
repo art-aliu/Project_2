@@ -6,6 +6,7 @@
 
 * [Brief](#Brief)
 * [Diagram](#Diagram)
+* [Trello Board](#Trello-Board)
 * [ED](#ED)
 * [Risk Assessment](#Risk-Assessment)
 * [Updated Risk Assessment](#Updated-Risk-Assessment)
@@ -37,6 +38,13 @@ The full tech stack that I will use in this project is:
 ![image](https://user-images.githubusercontent.com/101266740/166442658-c3dbaae7-eed1-4ca5-b6b0-6085dfc062cc.png)
 
 As the diagram reveals, service 1 will be my front end. Services 2 and 3 will provide a random physical attribute and a random football skill and service 4 will use the result to give a 'position'.
+
+## Trello Board
+
+I used Trello as a tool for my project management which helped me store and document all of my progress
+
+![image](https://user-images.githubusercontent.com/101266740/166707724-3043464a-fc17-48cd-8605-0ca453fec013.png)
+
 
 ## ED
 
