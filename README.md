@@ -51,6 +51,12 @@ Initially my idea was to have service 2 generating a random attribute for a play
 
 My risk assessment for this project shows the possible risks that may arise during this project and the dates which I wrote down each risk.
 
+## Updated Risk Assessment
+
+Whilst going along the project I realised there was more to add to the risk assessment which is what I proceeded to do as shown below:
+
+![image](https://user-images.githubusercontent.com/101266740/166706720-93649325-0df7-42f8-ad98-75114500f0c7.png)
+
 ## CI/CD pipeline 
 
 ![image](https://user-images.githubusercontent.com/101266740/165782428-cdfc021f-4c7f-4800-86b6-b59873daae2d.png)
