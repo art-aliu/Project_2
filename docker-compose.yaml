@@ -1,33 +1,69 @@
-version: "3.8"
-services:
-  ngnix:
-    container_name: ngnix_1
-    image: ngnix:latest
-    ports:
-    - target: 80
-    published: 80
-    protocol: tcp
-  volumes:
-  - type: bind
-  source: ./nginx.conf
-  target: /etc/nginx/nginx.conf
-  depends_on:
-  - Service_1
+# version: "3.8"
+# services:
+#   Service_1:
+#     container_name: "Service_1"
+#     image: artaliu/Service_1
+#     build: Service_1
+#     environment:
+#       DATABASE_URI:
+#     ports:
+#     - target: 80
+#     published: 5000
+#     protocol: tcp
+  
 
- Service_1: 
-    container_name: Service_1
-    build: ./Service_1
+version: "3.8"
+services: 
+  nginx: 
+    container_name: nginx_1
+    image: nginx:latest
+    ports: 
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes: 
+    - type: bind 
+      source: ./nginx.conf
+      target: /etc/nginx/nginx.conf
+    depends_on: 
+    - service_1 
+
+  service_1: 
+    container_name: service_1
+    build: ./service_1  
     depends_on: 
     - service_2
     - service_3
 
-  service_2:
+  service_2: 
     container_name: service_2
     build: ./service_2
 
   service_3:
     container_name: service_3
     build: ./service_3
+    
+
+  # Service_2: 
+  #   container_name: "Service_2"
+  #   image: artaliu/Service_2
+  #   build: Service_2/
+
+  # Service_3:
+  #   container_name: "Service_3"
+  #   image: artaliu/Service_3
+  #   build: Service_3/
+
+  # Service_4:
+  #   container_name: "Service_4"
+  #   image: artaliu/Service_4
+  #   build: Service_4/
+
+
+
+
+
+
 
 # version: "3.9"
 # services:
