@@ -5,7 +5,6 @@
 ## Contents
 
 * [Brief](#Brief)
-* [Diagram](#Diagram)
 * [Trello Board](#Trello-Board)
 * [ED](#ED)
 * [Risk Assessment](#Risk-Assessment)
@@ -35,11 +34,6 @@ The full tech stack that I will use in this project is:
 - NGINX as reverse proxy
 - Docker Swarm
 
-## Diagram
-
-![image](https://user-images.githubusercontent.com/101266740/166442658-c3dbaae7-eed1-4ca5-b6b0-6085dfc062cc.png)
-
-As the diagram reveals, service 1 will be my front end. Services 2 and 3 will provide a random physical attribute and a random football skill and service 4 will use the result to give a 'position'.
 
 ## Trello Board
 
@@ -54,7 +48,7 @@ I started with this basic entity diagram as my initial thoughts as to what I wan
 
 ![image](https://user-images.githubusercontent.com/101266740/166654334-70edc87d-0a57-46f6-a428-9cab5a0b12bd.png)
 
-Initially my idea was to have service 2 generating a random attribute for a player and for service 3 to have generate a number number between 1-99 using 'random.randint' to show the "skill" level of a player. However, I decided to change it  so that both services 2 and 3 provide a 'random.choice' of a player attribute and player skill respectively. Service 4 will then use the results to determine the best possible position for this player. This change made more sense for what I wanted my app to show.
+Initially my idea was to have service 2 generating a random attribute for a player and for service 3 to have generate a number number between 1-99 using 'random.randint' to show the "skill" level of a player. However, I decided to change it  so that both services 2 and 3 provide a 'random.choice' of a player attribute and player skill respectively. Service 4 will then gather the information from services 2 and 3 and deliver a rating using requests and dictionaries.
 
 ## Risk Assessment
 
@@ -81,7 +75,7 @@ In response to the brief, I have chosen to develop a prize generator. This will 
 - Front-end (Service 1): The service with which the user interacts. This service sends requests to the other services to generate random events and then displays the generated events to the user.
 - Number API (Service 2): This service receives HTTP GET requests from service 1 and responds with a random attribute, using random.choice().
 - Name API (Service 3): This service receives HTTP GET requests from service 1, and responds with a randomly selected football skill from a list, using random.choice().
-- Generate API (Service 4): This service receives HTTP POST requests from service 1, which provide the randomly generated attributes and skills, service 4 has two dictionaries which use this data to determine the status effect associated with the event.
+- Generate API (Service 4): This service receives HTTP POST requests from service 1, which provide the randomly generated attributes and skills, service 4 has two dictionaries which use this data to provide a point based rating.
 
 ## Services
 
