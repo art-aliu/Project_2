@@ -1,6 +1,6 @@
 from application import app
-from flask import render_template, redirect, url_for, request
-import requests, json
+from flask import render_template, redirect, url_for, request, jsonify, json
+import requests
 
 
 @app.route('/', methods=["POST", "GET"])
@@ -9,17 +9,14 @@ def index():
     skill = requests.get('http://service-3:5000/get/Skill').text
 
     content = {'attribute': attribute, 'skill': skill}
-    status = requests.post('http://service-4:5000/post/position', json=content).json()
+    rating = requests.post('http://service-4:5000/post/rating', json=rating).json()
+    
+    records = Footballer.query.order_by(Footballer.id.desc()).limit(15).all()
 
-    new_attribute = Attribute(speed=speed, strength=strength, endurance=endurance,)
+    outcome = Footballer(attribute=attribute, skill=skill, rating=rating)
+    db.session.add(outcome)
+    db.session.commit()
+    data = Footballer.query.all()
 
-    # context = db.session.query(Attribute).order_by(Attribute.id.desc()).first()
-
-    # if new_attribute:
-    #     db.session.add(new_attribute)
-    #     db.session.commit()
-
-    # statement = f"You have generated a {attribute} with a football skills {skill} and therefore the preferred position for this player would be {position}
-
-    return render_template('index.html', statement=statement, context=context)
+    return render_template('index.html', outcome=outcome, attribute=attribute, skill=skill, rating=rating, data=data)
 

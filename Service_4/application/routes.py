@@ -1,23 +1,33 @@
-from application import app 
 from flask import Flask, request, jsonify, Response
 import random
 
-# @app.route('/post/status', methods=['POST'])
-# def post_status():
-#     attribute = request.jason['attribute']
-#     skill = request.json['skill']
+app = Flask(__name__)
 
-#     if attribute == speed:
-#         name = random.choice(list(speed["ratings"]. values()))
+rating = {
+    'attribute': {
+        'Speed': 5
+        'Strength': 3
+        'Endurance': 2
+    },
+    'skill': {
+        'shooting': 9
+        'passing': 8
+        'tackling': 8
+    }
+}
 
-@app.route('get_position', method=['POST'])
-def effect():
-    position_stat = request.get_json
-    attribute_name = position_stat["Attribute"]
-    skill_name = position_stat["Skill"]
-    position = {"Shooting" : "Striker", "Passing" : "Midfielder", "Tackling" : "Defender", "Relexes" : "Goalkeeper"}
 
-# app = Flask(__name__)
+@app.route('/post/rating', method=['POST'])
+def post_rating():
+    attribute= request.json['Attribute']
+    skill = request.json['Skill']
+
+    rating = rating['attribute'[attribute] + rating['skill'][skill]]
+
+
+    return jsonify(position)
+
+
 
 # Speed = { 
 #     "ratings": {
