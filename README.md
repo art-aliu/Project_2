@@ -1,4 +1,4 @@
-# Football Position Generator
+# Football Skill Generator
 
 ### Author: Art Aliu
 
