@@ -1,15 +1,11 @@
 from application import app 
-from flask import Flask
+from flask import Flask, Response, request
 import random
 
-app = Flask(__name__)
+ratings = ["Five Stars", "Four Stars", "Three Stars", "Two Stars", "One Star"]
 
-
-skill = ["Shooting", "Passing", "Tackling"]
-
-@app.route('/get_skill',methods=['GET'])
-def get_skill(): 
-    return random.choice(skill)
+@app.route('/rating', methods = ['GET'])
+def rating(): 
+    rating_selected = random.choice(ratings)
+    return Response(f"(rating_selected)", mimetype='text/plain')
     
-# if __name__ == '__main__':
-#     app.run(host='0.0.0.0')

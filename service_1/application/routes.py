@@ -1,22 +1,17 @@
 from application import app
-from flask import render_template, redirect, url_for, request, jsonify, json
+from flask import Flask, render_template, jsonify, Response
 import requests
 
 
-@app.route('/', methods=["POST", "GET"])
-def index():
-    attribute = requests.get('http://service-2:5000/get/Attribute').text
-    skill = requests.get('http://service-3:5000/get/Skill').text
+@app.route('/')
+def home():
+    attribute_generated = requests.get('http://service_2:5000/attribute')
+    rating_generated = requests.get('http://service_3:5000/rating')
 
-    content = {'attribute': attribute, 'skill': skill}
-    rating = requests.post('http://service-4:5000/post/rating', json=rating).json()
+    # content = {'attribute': attribute, 'skill': skill}
+    final_score = requests.post('http://service_4:5000/extra')
     
-    records = Footballer.query.order_by(Footballer.id.desc()).limit(15).all()
+    # final_rating = f"Rating '{attribute_generated.text}', gets a scout rating of '{rating_generated.text}' and a comment of '{final_score.text}'"
 
-    outcome = Footballer(attribute=attribute, skill=skill, rating=rating)
-    db.session.add(outcome)
-    db.session.commit()
-    data = Footballer.query.all()
-
-    return render_template('index.html', outcome=outcome, attribute=attribute, skill=skill, rating=rating, data=data)
+    return render_template('home.html', final_rating=final_rating)
 

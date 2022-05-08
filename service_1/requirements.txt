@@ -1,4 +1,4 @@
-
+flask
 flask_testing
 pytest
 pytest-cov
@@ -9,5 +9,5 @@ gunicorn
 itsdangerous
 Jinja2
 MarkupSafe
-Werkzeug
 requests
+

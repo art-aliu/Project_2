@@ -1,4 +1,5 @@
-from application import db
+from flask import Flask, request
 
-db.create_all()
+app = Flask(__name__)
 
+from application import routes

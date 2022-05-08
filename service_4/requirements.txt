@@ -1,0 +1,8 @@
+flask
+Jinja2
+markupsafe
+requests
+itsdangerous
+gunicorn
+pytest
+pytest-cov
