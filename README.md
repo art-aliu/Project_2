@@ -1,4 +1,4 @@
-# Football Skill Generator
+# Football Rating Generator
 
 ### Author: Art Aliu
 
