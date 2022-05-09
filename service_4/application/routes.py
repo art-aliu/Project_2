@@ -1,6 +1,6 @@
 from application import app
-from flask import Flask, request, jsonify
-import requests, random
+from flask import Flask, request, jsonify, json, render_template
+import random, requests
 
 
 scout_ratings = {
