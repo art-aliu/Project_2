@@ -1,6 +1,6 @@
 from application import app
-from flask import Flask, request, jsonify, json, render_template
-import random, requests
+from flask import Flask, request, jsonify, render_template
+import random, json
 
 
 scout_ratings = {
@@ -15,34 +15,41 @@ scout_ratings = {
         'Tackling': 3
     }
 }
+
 @app.route('/post/rating', methods=['POST'])
 def post_rating():
     attribute = request.json['attribute']
     skill = request.json['skill']
     
     rating = scout_ratings['attribute'][attribute] + scout_ratings['skill'][skill]
-
+    
     return jsonify(rating)
-    
+
+    # if attribute == 'Speed':
+    #     ratings = "5"
+    # elif attribute == 'Strength':
+    #     ratings = "3"
+    # elif attribute == 'Endurance':
+    #     ratings = "2"
+    # else:
+    #     attribute = "Scout likes you"
+
+    # if skill == 'Shooting':
+    #     score = "5"
+    # elif skill == 'Passing':
+    #     score = "3"
+    # elif skill == 'Tackling':
+    #     score = '3'
+    # else:
+    #     skill = "World Class"
+
+    # overall_scout_rating = { 
+    #     "ratings": ratings,
+    #     "score": score
+    #    }
+
+    # return jsonify(overall_scout_rating)
 
     
 
 
-
-
-# notes = {0: "Has great potential", 1: "Will never make it"
-# special = "Shooting, Passing, Speed"
-
-
-# @app.route('/extra', method=['POST'])
-# def extra():
-#     attributes = request.get_json["Attribute"]
-#     ratings = request.get_json["Rating"]
-
-
-
-#     for special in attributes:
-#         if special in get_attribute:
-#             return Response(f"{notes[0)}", mimetype = 'text/plain')
-#         else:
-#             return Response(f"{notes[1)}", mimetype = 'text/plain')

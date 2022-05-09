@@ -1,13 +1,14 @@
-from application import app 
-from flask import Flask, request, Response
+from application import app
+from flask import Flask
 import random
 
-attributes = ['Speed', 'Strength', 'Endurance', "Shooting", "Passing", "Tackling"]
 
-@app.route('/attribute', methods=['GET'])
-def attribute():
-    attribute_selected = random.choice(attributes)
-    return Response(f"{attribute_selected}", mimetype='text/plain')
+attribute = ['Speed', 'Strength', 'Endurance']
+
+@app.route('/get/attribute')
+def get_attribute():
+    return random.choice(attribute)
+
     
 
  
