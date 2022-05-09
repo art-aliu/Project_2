@@ -1,11 +1,7 @@
-FROM python:3.9.6
-
-WORKDIR /Service_4
-
-COPY . /app/
-
-RUN pip3 install -r requirements.txt
-
-EXPOSE 5000
-
+FROM python:3.6.9
+WORKDIR /service_4 
+COPY . . 
+RUN pip install -r requirements.txt
+EXPOSE 5000 
 ENTRYPOINT ["python3", "app.py"]
+
