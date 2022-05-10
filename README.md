@@ -79,6 +79,8 @@ In response to the brief, I have chosen to develop a prize generator. This will 
 
 ## Services
 
+The Front end of the app is seen below. The page refreshes and will generate a random attribute and a random skill. Service 4 then uses these two randomly generated data to give a rating.
+
 ![image](https://user-images.githubusercontent.com/101266740/167589433-695049cb-95fa-4e43-a05b-f88c7a648824.png)
 
 ![image](https://user-images.githubusercontent.com/101266740/167589499-15869ae1-c21c-4934-9748-8f5929529051.png)
