@@ -1,4 +1,4 @@
-# Football Rating Generator
+# Football Scout Rating Generator
 
 ### Author: Art Aliu
 
@@ -48,7 +48,7 @@ I started with this basic entity diagram as my initial thoughts as to what I wan
 
 ![image](https://user-images.githubusercontent.com/101266740/166654334-70edc87d-0a57-46f6-a428-9cab5a0b12bd.png)
 
-Initially my idea was to have service 2 generating a random attribute for a player and for service 3 to have generate a number number between 1-99 using 'random.randint' to show the "skill" level of a player. However, I decided to change it  so that both services 2 and 3 provide a 'random.choice' of a player attribute and player skill respectively. Service 4 will then gather the information from services 2 and 3 and deliver a rating using requests and dictionaries.
+Initially my idea was to have service 2 generating a random attribute for a player and for service 3 to have generate a number number between 1-99 using 'random.randint' to show the "skill" level of a player. However, I decided to change it  so that both services 2 and 3 provide a 'random.choice' of a player attribute and player skill respectively. Service 4 will then gather the information from services 2 and 3 and deliver a scout rating using requests and dictionaries. The rating will add the numbers based from the services generated in services 2 and 3.
 
 ## Risk Assessment
 
