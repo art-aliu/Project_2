@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 import random
-
-app = Flask(__name__)
+from application import app
 
 
 if __name__ == '__main__':

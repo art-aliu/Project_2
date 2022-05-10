@@ -16,14 +16,16 @@ scout_ratings = {
     }
 }
 
-@app.route('/post/rating', methods=['POST'])
+@app.route('/post_rating', methods=['POST'])
 def post_rating():
-    attribute = request.json['attribute']
-    skill = request.json['skill']
+    attribute = request.get_json()['attribute']
+    skill = request.get_json()['skill']
     
     rating = scout_ratings['attribute'][attribute] + scout_ratings['skill'][skill]
     
     return jsonify(rating)
+
+
 
     # if attribute == 'Speed':
     #     ratings = "5"

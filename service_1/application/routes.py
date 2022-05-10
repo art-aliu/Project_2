@@ -10,9 +10,9 @@ def home():
 
     content = {'attribute': attribute, 'skill': skill}
 
-    rating = requests.post('http://service_4:5000/post/rating', json=content) 
+    rating = requests.post('http://service_4:5000/post_rating', json=content).text
 
-    final_rating = f"This player has '{attribute}', and '{skill}' and therefore gets a scout rating of '{rating.text}'"
+    final_rating = f"This player has '{attribute}', and '{skill}' and therefore gets a scout rating of '{rating}'"
 
     return render_template('home.html', attribute=attribute, skill=skill, rating=rating, final_rating=final_rating)
    
