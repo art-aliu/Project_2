@@ -87,6 +87,16 @@ The Front end of the app is seen below. The page refreshes and will generate a r
 
 ## Testing
 
+I utlised my testing for each of the 4 services as seen below:
+
+![image](https://user-images.githubusercontent.com/101266740/167639537-ff9046e2-b9c6-4913-b221-eac7423a540b.png)
+
+![image](https://user-images.githubusercontent.com/101266740/167639561-feefe235-b819-4b31-af54-14bba3599139.png)
+
+![image](https://user-images.githubusercontent.com/101266740/167639621-5fba8491-80f8-40f0-b8f0-5fe91f9ecb32.png)
+
+![image](https://user-images.githubusercontent.com/101266740/167639644-1e61fc05-6dbc-4fcc-855b-373d7a322955.png)
+
 ## Future Improvements
 
 ## Acknowledgements
