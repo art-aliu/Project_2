@@ -37,28 +37,17 @@
 // } 
 
 pipeline{
-
         agent any
-
         stages{
-
-            stage('Testing'){
-
+            stage('Testing Services'){
                 steps{
-
-                    sh "bash test.sh"
-
+                    sh "bash tests.sh"
                 }
-
             }
 
-        }
-
-}
-
-            stage('Docker-compose'){
+            stage('Docker'){
                 steps {
-                    sh "ln -s Project_2/docker-compose.yaml build"
+                    sh "ln -s Project_2/docker-compose.yaml building"
                 }
             }
         }
