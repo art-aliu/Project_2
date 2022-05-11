@@ -87,7 +87,7 @@ The Front end of the app is seen below. The page refreshes and will generate a r
 
 ## Testing
 
-I utlised my testing for each of the 4 services as seen below:
+I utlised my testing for each of the 4 services as seen below, getting 100% coverage on all tests.
 
 ![image](https://user-images.githubusercontent.com/101266740/167639537-ff9046e2-b9c6-4913-b221-eac7423a540b.png)
 
@@ -98,6 +98,8 @@ I utlised my testing for each of the 4 services as seen below:
 ![image](https://user-images.githubusercontent.com/101266740/167639644-1e61fc05-6dbc-4fcc-855b-373d7a322955.png)
 
 ## Future Improvements
+
+Improve the aesthetics of the app aswell as fully utilise the CRUD to allow the user to choose more attributes and skills instead of the 6 in which they were restricted too. I would also like my application to display a variety of different ratings depending on the scout.
 
 ## Acknowledgements
 
