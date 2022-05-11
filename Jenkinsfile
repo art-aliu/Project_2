@@ -67,7 +67,7 @@ pipeline{
 
             stage('Docker-compose'){
                 steps {
-                    sh "ln -s Project_2/docker-compose.yaml building"
+                    sh "ln -s Project_2/docker-compose.yaml build"
                 }
             }
         }
