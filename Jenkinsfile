@@ -41,7 +41,7 @@ pipeline{
         stages{
             stage('Testing Services'){
                 steps{
-                    sh "bash tests.sh"
+                    sh "bash test.sh"
                 }
             }
 
