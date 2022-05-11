@@ -1,0 +1,14 @@
+all:
+  children:
+    managers:
+      hosts:
+        master:
+    workers:
+      hosts:
+        worker:
+        
+  vars:
+    ansible_user: jenkins
+    ansible_ssh_private_key_file: '~/.ssh/ansible_id_rsa'
+    ansible_python_interpreter: "/usr/bin/python3"
+    
