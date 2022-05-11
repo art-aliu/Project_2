@@ -36,34 +36,25 @@
 //     }
 // } 
 
-// pipeline{
-
-//         agent any
-
-//         stages{
-
-//             stage('Testing'){
-
-//                 steps{
-
-//                     sh "bash test.sh"
-
-//                 }
-
-//             }
-
-//         }
-
-// }
-
 pipeline{
+
         agent any
+
         stages{
-            stage('Testing Services'){
+
+            stage('Testing'){
+
                 steps{
-                    sh "bash tests.sh"
+
+                    sh "bash test.sh"
+
                 }
+
             }
+
+        }
+
+}
 
             stage('Docker-compose'){
                 steps {
