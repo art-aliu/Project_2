@@ -22,7 +22,7 @@ do
 
     pip3 install -r requirements.txt
 
-    python3 -m pytest --cov
+    python3 -m pytest --cov=application
 
     cd ..
 
