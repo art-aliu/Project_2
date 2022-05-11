@@ -1,4 +1,4 @@
-FROM python:3.6.9
+FROM python:3.8
 WORKDIR /service_2 
 COPY . . 
 RUN pip install -r requirements.txt
