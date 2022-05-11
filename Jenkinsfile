@@ -36,33 +36,39 @@
 //     }
 // } 
 
+// pipeline{
+
+//         agent any
+
+//         stages{
+
+//             stage('Testing'){
+
+//                 steps{
+
+//                     sh "bash test.sh"
+
+//                 }
+
+//             }
+
+//         }
+
+// }
+
 pipeline{
-
         agent any
-
         stages{
-
-            stage('Testing'){
-
+            stage('Testing Services'){
                 steps{
-
-                    sh "bash test.sh"
-
+                    sh "bash tests.sh"
                 }
-
             }
 
+            stage('Docker-compose'){
+                steps {
+                    sh "ln -s Project_2/docker-compose.yaml building"
+                }
+            }
         }
-
 }
-
-        //  stage('Build and push images') {
-        //     environment {
-        //         DOCKER_UNAME = credentials('docker_uname')
-        //         DOCKER_PWORD = credentials('docker_pword')
-        //     }
-        //     steps {
-        //         sh "docker-compose build --parallel"
-        //         sh "docker login -u $DOCKER_UNAME -p $DOCKER_PWORD"
-        //         sh "docker-compose push"
-        //     }
