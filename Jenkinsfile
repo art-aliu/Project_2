@@ -50,9 +50,11 @@ pipeline{
                     sh "ln -s Project_2/docker-compose.yaml building"
                 }
             }
-        }
-}
+        
             stage('Stage3-ansible') {
                 steps {
                     sh "bash ansible.sh"
                 }
+            }
+        }
+}
