@@ -44,7 +44,12 @@ pipeline{
                     sh "bash test.sh"
                 }
             }
-
+        stage('Build and push images') {
+            environment {
+                DOCKER_UNAME = credentials('docker_uname')
+                DOCKER_PWORD = credentials('docker_pword')
+                }
+            }
             stage('Docker'){
                 steps {
                     sh "docker-compose build --parallel"
