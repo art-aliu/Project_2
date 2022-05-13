@@ -62,4 +62,5 @@ pipeline{
                 sh "ansible-playbook -i configuration/inventory.yaml configuration/playbook.yaml"
             }
         }
-} 
+    } 
+}
