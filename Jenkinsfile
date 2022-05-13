@@ -58,7 +58,7 @@ pipeline{
                 }
             }
         
-            stage('Stage3-ansible') {
+            stage('ansible') {
                 steps {
                     sh "bash ansible.sh"
                 }
