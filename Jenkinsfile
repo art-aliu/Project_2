@@ -47,7 +47,9 @@ pipeline{
 
             stage('Docker'){
                 steps {
-                    sh "ln -s Project_2/docker-compose.yaml building"
+                    sh "docker-compose build --parallel"
+                    sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
+                    sh "docker-compose push"
                 }
             }
         
