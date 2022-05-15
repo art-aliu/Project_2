@@ -50,6 +50,15 @@ I started with this basic entity diagram as my initial thoughts as to what I wan
 
 Initially my idea was to have service 2 generating a random attribute for a player and for service 3 to have generate a number number between 1-99 using 'random.randint' to show the "skill" level of a player. However, I decided to change it  so that both services 2 and 3 provide a 'random.choice' of a player attribute and player skill respectively. Service 4 will then gather the information from services 2 and 3 and deliver a scout rating using requests and dictionaries. The rating will add the numbers based from the services generated in services 2 and 3.
 
+## App Design
+
+In response to the brief, I have chosen to develop a prize generator. This will look as follows:
+
+- Front-end (Service 1): The service with which the user interacts. This service sends requests to the other services to generate random events and then displays the generated events to the user.
+- Number API (Service 2): This service receives HTTP GET requests from service 1 and responds with a random attribute, using random.choice().
+- Name API (Service 3): This service receives HTTP GET requests from service 1, and responds with a randomly selected football skill from a list, using random.choice().
+- Generate API (Service 4): This service receives HTTP POST requests from service 1, which provide the randomly generated attributes and skills, service 4 has two dictionaries which use this data to provide a point based rating.
+
 ## Risk Assessment
 
 ![image](https://user-images.githubusercontent.com/101266740/166652051-3153ea9c-7667-4ed5-b7fc-bb4c8ce100fc.png)
@@ -68,14 +77,8 @@ Whilst going along the project I realised there was more to add to the risk asse
 
 Image taken from: https://collabnix.com/wp-content/uploads/2018/03/ci-cd.png
 
-## App Design
+Jenkins was used as a CI Pipeline. I used Github to set up a webhook and then executed the pipeline script which was defined in my Jenkinsfile. I did run into many issues when it came to running ansible on my machine. Issues such as 'failed host key verification' and issues with Docker login. My pipeline consists of 4 main stages: 
 
-In response to the brief, I have chosen to develop a prize generator. This will look as follows:
-
-- Front-end (Service 1): The service with which the user interacts. This service sends requests to the other services to generate random events and then displays the generated events to the user.
-- Number API (Service 2): This service receives HTTP GET requests from service 1 and responds with a random attribute, using random.choice().
-- Name API (Service 3): This service receives HTTP GET requests from service 1, and responds with a randomly selected football skill from a list, using random.choice().
-- Generate API (Service 4): This service receives HTTP POST requests from service 1, which provide the randomly generated attributes and skills, service 4 has two dictionaries which use this data to provide a point based rating.
 
 ## Services
 
@@ -84,6 +87,8 @@ The Front end of the app is seen below. The page refreshes and will generate a r
 ![image](https://user-images.githubusercontent.com/101266740/167589433-695049cb-95fa-4e43-a05b-f88c7a648824.png)
 
 ![image](https://user-images.githubusercontent.com/101266740/167589499-15869ae1-c21c-4934-9748-8f5929529051.png)
+
+The two images above show the front end which shows the idea of my app. It shows two pages, the second one is after refreshing. And the rating is giving a score which is combining what a scout(in this case the scout is me) is rating those skills in terms of importance on a player. I then used an f string to as a way to explain the scouts review.
 
 ## Testing
 
