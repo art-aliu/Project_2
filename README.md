@@ -39,7 +39,7 @@ The full tech stack that I will use in this project is:
 
 I used Trello as a tool for my project management which helped me store and document all of my progress
 
-![image](https://user-images.githubusercontent.com/101266740/166707724-3043464a-fc17-48cd-8605-0ca453fec013.png)
+![image](https://user-images.githubusercontent.com/101266740/168490568-c3f41699-82d5-4df8-8ef7-44d4e00b1ce7.png)
 
 
 ## ED
