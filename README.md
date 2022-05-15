@@ -77,7 +77,9 @@ Whilst going along the project I realised there was more to add to the risk asse
 
 Image taken from: https://collabnix.com/wp-content/uploads/2018/03/ci-cd.png
 
-Jenkins was used as a CI Pipeline. I used Github to set up a webhook and then executed the pipeline script which was defined in my Jenkinsfile. I did run into many issues when it came to running ansible on my machine. Issues such as 'failed host key verification' and issues with Docker login. My pipeline consists of 4 main stages: 
+Jenkins was used as a CI Pipeline. I used Github to set up a webhook and then executed the pipeline script which was defined in my Jenkinsfile. I did run into many issues when it came to running ansible on my machine. Issues such as 'failed host key verification' and issues with Docker login. My pipeline consists of 4 main stages: "Testing, Build and push images, docker and deploy". The testing stage executes a bash script which tests all 4 of my services through pytest. The results showed 100% code coverage which was the goal and assured me that all functions for the app were working correctly and smoothly. 
+Once the tests are seen to be successful, the build/push stage is executed which uses docker-compose to create the images for the different services which then pushes the images to the Dockerhub. The Jenkins pipeline shows the detailed breakdown of each stage providing an in depth look at each part of the project.
+Following this, the deploy stage will then deploy the application, including the docker-compose.yaml and nginx.conf files. The ansible playbook will run all the relevant roles which includes: installing docker on the two swarm machines, initialise a swarm on the manager node and a worker. Stafes that are successful will appear green whilst those that fail will appear red.
 
 
 ## Services
