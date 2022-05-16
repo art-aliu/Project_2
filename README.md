@@ -81,7 +81,7 @@ Jenkins was used as a CI Pipeline. I used Github to set up a webhook and then ex
 
 Once the tests are seen to be successful, the build/push stage is executed which uses docker-compose to create the images for the different services which then pushes the images to the Dockerhub. The Jenkins pipeline shows the detailed breakdown of each stage providing an in depth look at each part of the project.
 
-Following this, the deploy stage will then deploy the application, including the docker-compose.yaml and nginx.conf files. The ansible playbook will run all the relevant roles which includes: installing docker on the two swarm machines, initialise a swarm on the manager node and a worker. Stafes that are successful will appear green whilst those that fail will appear red.
+Following this, the deploy stage will then deploy the application, including the docker-compose.yaml and nginx.conf files. The ansible playbook will run all the relevant roles which includes: installing docker on the two swarm machines, initialise a swarm on the manager node and a worker. Stafes that are successful will appear green whilst those that fail will appear red. 
 
 
 ## Services
