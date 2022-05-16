@@ -113,5 +113,4 @@ Improve the aesthetics of the app aswell as fully utilise the CRUD to allow the 
 ## Acknowledgements
 
 -Victoria Sacre
--Bootstrap
--W3schools for basic navbar code
+
