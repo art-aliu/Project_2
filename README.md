@@ -69,7 +69,7 @@ My risk assessment for this project shows the possible risks that may arise duri
 
 Whilst going along the project I realised there was more to add to the risk assessment which is what I proceeded to do as shown below:
 
-![image](https://user-images.githubusercontent.com/101266740/166706720-93649325-0df7-42f8-ad98-75114500f0c7.png)
+![image](https://user-images.githubusercontent.com/101266740/168623169-55f24cdf-b0e3-4749-8e48-2a83f7513085.png)
 
 ## CI/CD pipeline 
 
