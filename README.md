@@ -20,7 +20,7 @@
 
 The brief provided to us for this project sets the following out as its overall objective: "create an application that generates “Objects” upon a set of predefined rules. These “Objects” can be from whatever domain you wish."
 
-I propose to create a football position app to meet these demands.
+I propose to create a football scout rating app to meet these demands.
 
 We must create an application that has at least 4 services working together.
 Service 1 will be the 'core service' which will be responsible for communicating with the other 3 services. Services 2 and 3 will both create a random object, with service 4 also creating a random object based on the results of services 2 and 3.
@@ -48,7 +48,7 @@ I started with this basic entity diagram as my initial thoughts as to what I wan
 
 ![image](https://user-images.githubusercontent.com/101266740/166654334-70edc87d-0a57-46f6-a428-9cab5a0b12bd.png)
 
-Initially my idea was to have service 2 generating a random attribute for a player and for service 3 to have generate a number number between 1-99 using 'random.randint' to show the "skill" level of a player. However, I decided to change it  so that both services 2 and 3 provide a 'random.choice' of a player attribute and player skill respectively. Service 4 will then gather the information from services 2 and 3 and deliver a scout rating using requests and dictionaries. The rating will add the numbers based from the services generated in services 2 and 3.
+Initially, my idea was to have service 2 generating a random attribute for a player and for service 3 to have generate a number between 1-99 using 'random.randint' to show the "skill" level of a player. However, I decided to change it so that both services 2 and 3 provide a 'random.choice' of a player attribute and player skill respectively. Service 4 will then gather the information from services 2 and 3 and deliver a scout rating using requests and dictionaries. The rating will add the numbers based on the services generated in services 2 and 3.
 
 ## App Design
 
@@ -81,7 +81,7 @@ Jenkins was used as a CI Pipeline. I used Github to set up a webhook and then ex
 
 Once the tests are seen to be successful, the build/push stage is executed which uses docker-compose to create the images for the different services which then pushes the images to the Dockerhub. The Jenkins pipeline shows the detailed breakdown of each stage providing an in depth look at each part of the project.
 
-Following this, the deploy stage will then deploy the application, including the docker-compose.yaml and nginx.conf files. The ansible playbook will run all the relevant roles which includes: installing docker on the two swarm machines, initialise a swarm on the manager node and a worker. Stafes that are successful will appear green whilst those that fail will appear red. I did have a host key verification failure which I was unable to solve for the deploy section of my ansible which is something I will definitely work on for future projects.
+Following this, the deploy stage will then deploy the application, including the docker-compose.yaml and nginx.conf files. The ansible playbook will run all the relevant roles which include: installing docker on the two swarm machines, initialise a swarm on the manager node and a worker. States that are successful will appear green whilst those that fail will appear red. I did have a host key verification failure which I was unable to solve for the deploy section of my ansible which is something I will definitely work on for future projects.
 
 
 ## Services
@@ -92,11 +92,11 @@ The Front end of the app is seen below. The page refreshes and will generate a r
 
 ![image](https://user-images.githubusercontent.com/101266740/167589499-15869ae1-c21c-4934-9748-8f5929529051.png)
 
-The two images above show the front end which shows the idea of my app. It shows two pages, the second one is after refreshing. And the rating is giving a score which is combining what a scout(in this case the scout is me) is rating those skills in terms of importance on a player. I then used an f string to as a way to explain the scouts review.
+The two images above show the front end which shows the idea of my app. It shows two pages, the second one is after refreshing. And the rating is giving a score which is combining what a scout(in this case the scout is me) is rating those skills in terms of importance on a player. I then used an f string as a way to explain the scouts review.
 
 ## Testing
 
-I utlised my testing for each of the 4 services as seen below, getting 100% coverage on all tests.
+I utilised my testing for each of the 4 services as seen below, getting 100% coverage on all tests.
 
 ![image](https://user-images.githubusercontent.com/101266740/167639537-ff9046e2-b9c6-4913-b221-eac7423a540b.png)
 
